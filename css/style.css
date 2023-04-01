@@ -9,6 +9,7 @@
 * {
    box-sizing: border-box;
    scroll-behavior: smooth;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html {
@@ -267,6 +268,10 @@ input {
 
 .noimgcopy {
    pointer-events: none;
+}
+
+.noclickbg {
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 ::selection {
