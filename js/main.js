@@ -28,7 +28,7 @@ window.onload = function () {
 // Share
 const shareButton = document.getElementById("share-button");
 const shareUrl = window.location.href;
-const shareTitle = document.title;
+const shareTitle = "I'm Alina Rundko, a graphic designer. My portfolio demonstrates my skill in creating eye-catching and distinctive designs for brands, packaging, web, and UI. With my attention to detail, aesthetics, and understanding of clients' needs, I can help elevate your brand's visual identity. Take a look at my work and let's discuss how I can help you.\n"; // document.title;
 
 shareButton.addEventListener('click', () => {
    if (navigator.share) {
