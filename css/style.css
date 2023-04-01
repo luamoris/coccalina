@@ -1005,6 +1005,10 @@ input {
    .avatar:hover .cat {
       transform: translate(-155%, -50%);
    }
+
+   .important {
+      margin: 10px 0 25px 0;
+   }
 }
 
 @media (max-width: 320px) {}
