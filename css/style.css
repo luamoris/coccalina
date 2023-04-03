@@ -1014,6 +1014,7 @@ input {
 }
 
 .qr {
+   flex: 0 0 150px;
    order: 2;
    margin-left: 30px;
    padding: 12px;
@@ -1204,6 +1205,36 @@ input {
    }
 }
 
+@media (max-width: 500px) {
+
+   .happy-day_active .window-donate._active {
+      height: fit-content;
+   }
+
+   .qr {
+      flex: 0 0 120px;
+      width: 120px;
+      height: 120px;
+      margin-left: 15px;
+   }
+
+   .paypal__box {
+      height: 120px;
+   }
+
+   .paypal__form form::after {
+      font-size: 12px;
+   }
+
+   .window-donate__title span:first-child {
+      font-size: 18px;
+   }
+
+   .window-donate__title span:last-child {
+      font-size: 10px;
+   }
+}
+
 @media (max-width: 480px) {
    .data {
       flex-direction: column;
@@ -1300,6 +1331,21 @@ input {
 
    .main {
       margin-top: 25px;
+   }
+}
+
+@media (max-width: 470px) {
+   .paypal {
+      flex-direction: column;
+   }
+
+   .paypal__form {
+      padding-bottom: 10px;
+   }
+
+   .qr {
+      align-self: center;
+      margin: 20px 0 0 0;
    }
 }
 
