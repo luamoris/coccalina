@@ -10,15 +10,15 @@
    <meta name="author" content="ALINA RUDKO">
    <meta name="title" content="Graphic designer Alina Rudko">
    <meta name="description"
-      content="I'm Alina Rundko, a graphic designer. My portfolio demonstrates my skill in creating eye-catching and distinctive designs for brands, packaging, web, and UI. With my attention to detail, aesthetics, and understanding of clients' needs, I can help elevate your brand's visual identity. Take a look at my work and let's discuss how I can help you.">
+      content="I'm Alina Rudko, a graphic designer. My portfolio demonstrates my skill in creating eye-catching and distinctive designs for brands, packaging, web, and UI. With my attention to detail, aesthetics, and understanding of clients' needs, I can help elevate your brand's visual identity. Take a look at my work and let's discuss how I can help you.">
    <meta name="keywords"
-      content="Alina Rundko, graphic design, portfolio, branding, packaging, web design, UI design, attention to detail, aesthetics, distinctive designs, visual identity, creative solutions, client-focused">
+      content="Alina Rudko, graphic design, graphic designer, graphic designer Alina Rudko, portfolio, branding, packaging, web design, UI design, attention to detail, aesthetics, distinctive designs, visual identity, creative solutions, client-focused">
 
    <meta name="og:type" content="Portfolio">
    <meta name="og:title" content="Graphic designer Alina Rudko">
    <meta name="og:image" content="/img/favicon_1.ico">
    <meta name="og:description"
-      content="I'm Alina Rundko, a graphic designer. My portfolio demonstrates my skill in creating eye-catching and distinctive designs for brands, packaging, web, and UI. With my attention to detail, aesthetics, and understanding of clients' needs, I can help elevate your brand's visual identity. Take a look at my work and let's discuss how I can help you.">
+      content="I'm Alina Rudko, a graphic designer. My portfolio demonstrates my skill in creating eye-catching and distinctive designs for brands, packaging, web, and UI. With my attention to detail, aesthetics, and understanding of clients' needs, I can help elevate your brand's visual identity. Take a look at my work and let's discuss how I can help you.">
 
    <link rel="stylesheet" href="./css/style.css">
    <link rel="shortcut icon" href="/img/favicon_1.ico" type="image/x-icon">
@@ -38,9 +38,12 @@
                      <div class="card__body">
 
                         <!-- HEADER -->
-                        <header class="header">
+                        <header id="header" class="header">
                            <!-- AVATAR -->
                            <picture id="avatar" class="avatar nocopy _white">
+                              <div class="donate-box">
+                                 <img src="./img/donate.svg" alt="Donate for me!" id="donate" class="donate">
+                              </div>
                               <img src="./img/avatar.jpg" alt="It's me." class="img">
                               <!-- cat SVG -->
                               <svg id="cat" class="cat nocopy" width="67" height="45" viewBox="0 0 67 45" fill="none"
@@ -64,7 +67,7 @@
                         </header>
 
                         <!-- MAIN -->
-                        <main class="main">
+                        <main id="main" class="main">
                            <!-- DATETIME -->
                            <section class="section data">
                               <!-- TIME -->
@@ -114,7 +117,8 @@
                                  </li>
                                  <!-- instagram -->
                                  <li class="work _instagram">
-                                    <a href="#" target="_blank" class="work__link">
+                                    <a href="https://instagram.com/coccalinka?igshid=YmMyMTA2M2Y=" target="_blank"
+                                       class="work__link">
                                        <picture class="img_box">
                                           <img src="./img/instagram.svg" alt="My work instagram."
                                              class="work__img noimgcopy">
@@ -137,7 +141,7 @@
                         </main>
 
                         <!-- FOOTER -->
-                        <footer class="footer">
+                        <footer id="footer" class="footer">
                            <!-- SOCIAL -->
                            <ul class="social_communics nocopy">
                               <!-- linkedin -->
@@ -162,8 +166,7 @@
                               </li>
                               <!-- twitter -->
                               <li class="communic _twitter">
-                                 <a href="https://twitter.com/Coccalinka?t=hEBbMl7xp4EmwpThL-KOAw&s=09" target="_blank"
-                                    class="communic__link">
+                                 <a href="https://twitter.com/cocaline_rudko" target="_blank" class="communic__link">
                                     <img src="./img/icon_twitter.svg" alt="My twitter." class="communic__img">
                                  </a>
                               </li>
@@ -177,6 +180,40 @@
                               <span id="year" class="copyright__item">2023</span>
                            </div>
                         </footer>
+
+                        <!-- WINDOW DONATE -->
+                        <div id="window-donate" class="window-donate">
+                           <div id="btn-close" class="btn-close nocopy noclickbg"></div>
+                           <div class="window-donate__body">
+                              <div class="window-donate__title">
+                                 <span>It's my birthday!</span>
+                                 <span>You can give me a present.</span>
+                              </div>
+                              <div class="paypal">
+                                 <picture class="qr nocopy noclickbg noimgcopy">
+                                    <img src="./qr-code/QR-paypal.png" alt="QR-code" class="qr__img">
+                                 </picture>
+                                 <div class="paypal__box">
+                                    <div class="paypal__form">
+                                       <form action="https://www.paypal.com/donate" method="post" target="_blank"
+                                          data-text="Donate">
+                                          <input type="hidden" name="hosted_button_id" value="E5UFYJWSMZ6PG" />
+                                          <input type="image" class="paypal_full-btn noclickbg" src="#" border="0"
+                                             name="submit" title="PayPal - The safer, easier way to pay online!"
+                                             alt="Donate with PayPal button" />
+                                          <img alt="" border="0" src="https://www.paypal.com/en_UA/i/scr/pixel.gif"
+                                             width="1" height="1" />
+                                       </form>
+                                    </div>
+                                    <div class="paypal__container">
+                                       <picture class="paypal__logo nocopy noclickbg noimgcopy">
+                                          <img src="./img/paypal-icon.svg" alt="PayPal logotype." class="paypal__img">
+                                       </picture>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
 
                      </div>
                   </div>

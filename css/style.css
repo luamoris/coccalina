@@ -214,9 +214,11 @@ input {
    --title: rgba(255, 255, 255, 0.9);
    --bg: rgba(255, 255, 255, 0.1);
    --bg-light: rgba(255, 255, 255, 0.2);
+   --bg-black: rgba(0, 0, 0, 0.2);
    --selection: rgba(155, 66, 114, 0.5);
 
    --label-text: rgba(255, 151, 226, 0.8);
+   --label-text-h: rgba(255, 151, 226, 1);
    --label-bg: rgba(255, 151, 226, 0.1);
    --label-bg-hover: rgba(255, 151, 226, 0.2);
 
@@ -246,6 +248,9 @@ input {
    --twitter-bg: rgba(85, 172, 238, 0.5);
    --tiktok-bg: rgba(0, 242, 234, 0.5);
    --behance-bg: rgba(5, 62, 255, 0.5);
+
+   --btn-close-bg: rgba(234, 67, 53, 0.5);
+   --btn-close-bg-h: rgba(234, 67, 53, 0.8);
 }
 
 /* ============ HELP ============ */
@@ -334,7 +339,6 @@ input {
    border-radius: 50%;
    background-color: pink;
    opacity: 0;
-   /* transition: transform 100ms ease; */
    pointer-events: none;
 }
 
@@ -420,6 +424,7 @@ input {
 }
 
 .card__body {
+   overflow: hidden;
    padding: 50px;
    width: 100%;
    flex: 1;
@@ -431,6 +436,9 @@ input {
    background: var(--card-bg);
    box-shadow: var(--card-shadow);
    backdrop-filter: var(--card-filter);
+   -webkit-backdrop-filter: var(--card-filter);
+   -moz-backdrop-filter: var(--card-filter);
+   -ms-backdrop-filter: var(--card-filter);
 }
 
 /* ==== HEADER ==== */
@@ -502,6 +510,59 @@ input {
 
 .avatar._blue .cat path {
    fill: var(--blue);
+}
+
+.happy-day .donate-box {
+   display: flex;
+}
+
+.donate-box {
+   z-index: 3;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   border: 5px solid;
+   border-color: var(--avatar-border);
+   background: var(--white);
+}
+
+.donate-box .donate {
+   width: 50%;
+   height: 50%;
+   cursor: pointer;
+   animation: drift 4s ease-in-out infinite;
+}
+
+@keyframes drift {
+   0% {
+      transform: scale(1) translateY(0px) rotate(0);
+   }
+
+   20% {
+      transform: scale(1.1) translateY(-5px) rotate(-3deg);
+   }
+
+   40% {
+      transform: scale(1) translateY(5px) rotate(3deg);
+   }
+
+   60% {
+      transform: scale(1.1) translateY(-5px) rotate(3deg);
+   }
+
+   80% {
+      transform: scale(0.9) translateY(5px) rotate(-3deg);
+   }
+
+   100% {
+      transform: scale(1) translateY(0px) rotate(0);
+   }
 }
 
 /* == account == */
@@ -834,6 +895,229 @@ input {
 .communic__img {
    width: 30px;
    height: 30px;
+}
+
+/* ==== DONATE ==== */
+
+.window-donate {
+   position: relative;
+   padding: 60px 50px 20px 20px;
+   width: 100%;
+   height: 300px;
+   border-radius: 20px;
+   display: none;
+   background-color: var(--label-bg);
+   /* transform: scale(0); */
+   transform: translateX(-100%);
+   opacity: 0;
+}
+
+.btn-close {
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   width: 30px;
+   height: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 5px;
+   background-color: var(--btn-close-bg);
+   color: var(--text);
+   cursor: pointer;
+   transition: all 100ms ease-in-out;
+}
+
+.btn-close:hover {
+   background-color: var(--btn-close-bg-h);
+   color: var(--title);
+}
+
+.btn-close:active {
+   transform: scale(0.95);
+}
+
+.happy-day_active .window-donate._flex {
+   display: flex;
+   transition: transform 200ms ease-out, opacity 200ms ease-out;
+}
+
+.happy-day_active .window-donate._active {
+   /* transform: scale(1); */
+   transform: translateX(0);
+   opacity: 1;
+}
+
+.happy-day_active .card__body {
+   justify-content: center;
+   align-items: center;
+}
+
+.header,
+.main,
+.footer {
+   transition: transform 200ms ease-out, opacity 200ms ease-out;
+}
+
+.header._none,
+.main._none,
+.footer._none {
+   display: none;
+}
+
+.happy-day_active .header,
+.happy-day_active .main,
+.happy-day_active .footer {
+   /* transform: scale(0); */
+   transform: translateX(100%);
+   opacity: 0;
+   pointer-events: none;
+   user-select: none;
+}
+
+/* ==== DONATE CONTENT ==== */
+
+.window-donate__body {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.window-donate__title {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.window-donate__title span:first-child {
+   margin-bottom: 5px;
+   font-size: 20px;
+   letter-spacing: 1.05px;
+   text-transform: uppercase;
+   color: var(--title);
+}
+
+.window-donate__title span:last-child {
+   font-size: 12px;
+   letter-spacing: 1.05px;
+   font-weight: 700;
+   color: var(--text);
+}
+
+.paypal {
+   flex: 1 0 auto;
+   padding: 20px 0 0 0;
+   width: 100%;
+   display: flex;
+   justify-content: flex-start;
+}
+
+.qr {
+   order: 2;
+   margin-left: 30px;
+   padding: 12px;
+   width: 150px;
+   height: 150px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 4px;
+   background-color: var(--white);
+}
+
+.qr__img {
+   width: 100%;
+   height: 100%;
+}
+
+.paypal__box {
+   overflow: hidden;
+   order: 1;
+   flex: 1 0 auto;
+   height: 150px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.paypal__container {
+   width: 100%;
+   height: 30px;
+   display: flex;
+   justify-content: flex-start;
+   animation: toRight 10s linear infinite;
+}
+
+.paypal__logo {
+   align-self: flex-start;
+   padding: 5px 10px;
+   width: 100px;
+   height: 30px;
+   border-radius: 4px;
+   background-color: var(--bg-light);
+}
+
+.paypal__img {
+   width: 100%;
+   height: 100%;
+}
+
+@keyframes toRight {
+   from {
+      transform: translateX(-100px);
+   }
+
+   to {
+      transform: translateX(100%);
+   }
+}
+
+.paypal__form {
+   padding-bottom: 20px;
+   flex: 1 0 auto;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.paypal__form form {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 4px;
+   color: var(--label-text);
+   background-color: var(--bg);
+   transition: all 200ms ease-out;
+}
+
+.paypal__form form:hover {
+   color: var(--label-text-h);
+   background-color: var(--bg-light);
+}
+
+.paypal__form form::after {
+   content: attr(data-text);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   font-size: 14px;
+   font-weight: 800;
+   letter-spacing: 1.1px;
+   transform: translate(-50%, -50%);
+   pointer-events: none;
+}
+
+.paypal_full-btn {
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+
 }
 
 /* ============ MEDIA ============ */

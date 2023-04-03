@@ -1,0 +1,15 @@
+<svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 64H155V159C155 161.761 152.761 164 150 164H20C17.2386 164 15 161.761 15 159V64Z" fill="#F86357"/>
+<rect y="31" width="170" height="33" rx="5" fill="#EC5442"/>
+<rect x="65" y="31" width="40" height="33" fill="#FE9A2F"/>
+<rect x="65" y="64" width="40" height="100" fill="#FFAA50"/>
+<rect x="5" y="36" width="4" height="4" rx="2" fill="white" fill-opacity="0.5"/>
+<rect x="11" y="36" width="25" height="4" rx="2" fill="white" fill-opacity="0.5"/>
+<rect x="23" y="78" width="4" height="4" rx="2" fill="white" fill-opacity="0.5"/>
+<rect x="23" y="83" width="4" height="40" rx="2" fill="white" fill-opacity="0.5"/>
+<rect x="100" y="159" width="4" height="4" rx="2" transform="rotate(180 100 159)" fill="white" fill-opacity="0.5"/>
+<rect x="100" y="154" width="4" height="20" rx="2" transform="rotate(180 100 154)" fill="white" fill-opacity="0.5"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M85 31V10.9982C89.1782 7.85972 94.3721 6 100 6C113.807 6 125 17.1929 125 31H85Z" fill="#7979F7"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M85 31V10.9982C80.8218 7.85972 75.6279 6 70 6C56.1929 6 45 17.1929 45 31H85Z" fill="#5C5CEA"/>
+<rect x="78" y="40" width="14" height="14" rx="7" fill="white" fill-opacity="0.5"/>
+</svg>

@@ -129,7 +129,7 @@ window.onload = function () {
 // Share
 const shareButton = document.getElementById("share-button");
 const shareUrl = window.location.href;
-const shareTitle = "I'm Alina Rundko, a graphic designer. My portfolio demonstrates my skill in creating eye-catching and distinctive designs for brands, packaging, web, and UI. With my attention to detail, aesthetics, and understanding of clients' needs, I can help elevate your brand's visual identity. Take a look at my work and let's discuss how I can help you.\n"; // document.title;
+const shareTitle = "I'm Alina Rudko, a graphic designer. Take a look at my portfolio and let's discuss how I can help you.\n"; // document.title;
 
 shareButton.addEventListener('click', () => {
    if (navigator.share) {
@@ -173,3 +173,50 @@ catElm.addEventListener('click', async () => {
       cardElm.classList.remove(classBack, classNotEvents);
    }
 });
+
+// Donate
+const headerElm = document.getElementById("header");
+const mainElm = document.getElementById("main");
+const footerElm = document.getElementById("footer");
+const donateElm = document.getElementById("donate");
+const closeElm = document.getElementById("btn-close");
+const windowDonate = document.getElementById("window-donate");
+const dayBith = 3;
+const monthBith = 4;
+const classNone = "_none";
+const classFlex = "_flex";
+const classAcive = "_active";
+const toDay = new Date();
+if (toDay.getDate() == dayBith && toDay.getMonth() + 1 == monthBith) {
+   const classBith = "happy-day";
+   const activeBith = "happy-day_active";
+   cardElm.classList.add(classBith);
+   donateElm.addEventListener('click', () => {
+      cardElm.classList.add(activeBith);
+      setTimeout(function () {
+         headerElm.classList.add(classNone);
+         mainElm.classList.add(classNone);
+         footerElm.classList.add(classNone);
+      }, 200);
+      setTimeout(function () {
+         windowDonate.classList.add(classFlex);
+      }, 250);
+      setTimeout(function () {
+         windowDonate.classList.add(classAcive);
+      }, 300);
+   });
+   closeElm.addEventListener('click', () => {
+      windowDonate.classList.remove(classAcive);
+      setTimeout(function () {
+         windowDonate.classList.remove(classFlex);
+      }, 200);
+      setTimeout(function () {
+         headerElm.classList.remove(classNone);
+         mainElm.classList.remove(classNone);
+         footerElm.classList.remove(classNone);
+      }, 250);
+      setTimeout(function () {
+         cardElm.classList.remove(activeBith);
+      }, 300);
+   });
+}
