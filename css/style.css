@@ -328,10 +328,72 @@ input {
    object-fit: cover;
 }
 
+.star {
+   position: absolute;
+   z-index: 2;
+   border-radius: 50%;
+   background-color: pink;
+   opacity: 0;
+   /* transition: transform 100ms ease; */
+   pointer-events: none;
+}
+
+._c_pink {
+   background: radial-gradient(68.38% 68.38% at 50% 50%, #F483DD 50%, #4C0551 100%);
+   border: 1px solid #50044F;
+   filter: blur(1px);
+}
+
+._c_yellow {
+   background: linear-gradient(0deg, rgba(247, 228, 48, 0.3), rgba(247, 228, 48, 0.3)), radial-gradient(50% 50% at 50% 50%, #F7E430 50%, #CE560A 100%);
+   border: 1px solid #CE560A;
+   filter: blur(1px);
+}
+
+._c_blue {
+   background: linear-gradient(0deg, rgba(159, 221, 255, 0.3), rgba(159, 221, 255, 0.3)), radial-gradient(50% 50% at 50% 50%, #9FDDFF 50%, #2033B3 100%);
+   border: 1px solid #2033B3;
+   filter: blur(1px);
+}
+
+._c_green {
+   background: linear-gradient(0deg, rgba(142, 191, 162, 0.3), rgba(142, 191, 162, 0.3)), radial-gradient(50% 50% at 50% 50%, #8EBFA2 50%, #00AC7E 100%);
+   border: 1px solid #00AC7E;
+   filter: blur(1px);
+}
+
+._start {
+   animation: opacityStart 2s ease-in-out forwards;
+}
+
+._end {
+   animation: opacityEnd 0s ease-in-out forwards;
+}
+
+@keyframes opacityStart {
+   from {
+      opacity: 0;
+   }
+
+   to {
+      opacity: 1;
+   }
+}
+
+@keyframes opacityEnd {
+   from {
+      opacity: 1;
+   }
+
+   to {
+      opacity: 0;
+   }
+}
+
 /* == card == */
 
 .card {
-   z-index: 2;
+   z-index: 3;
    position: relative;
    width: 100%;
    min-height: 100%;
